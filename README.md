@@ -17,3 +17,5 @@
 * [应用场景](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.md)
 * [数字图像](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%9F%BA%E7%A1%80.md)
 * [图像处理工具](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7.md)
+* [传统的图像处理](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%A0%94%E7%A9%B6%E5%86%85%E5%AE%B9.md)
+* [computer vision]
