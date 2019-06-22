@@ -43,5 +43,5 @@
 
 ## 发展前沿
 * [三年来，CNN在图像分割领域经历了怎样的技术变革？](https://www.leiphone.com/news/201704/GEJU2kNeqGDpizN2.html)
-* [实例分割的进阶三级跳：从 Mask R-CNN 到 Hybrid Task Cascade]（https://www.leiphone.com/news/201903/CctvkMTejB1Fvgxp.html）
+* [实例分割的进阶三级跳：从 Mask R-CNN 到 Hybrid Task Cascade](https://www.leiphone.com/news/201903/CctvkMTejB1Fvgxp.html)
 ***
