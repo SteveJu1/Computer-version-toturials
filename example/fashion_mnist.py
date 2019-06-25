@@ -16,9 +16,9 @@ plt.imshow(train_set[59999])               #显示图片
 print(train_set[59999])                    #显示矩阵数值
 print(train_label[59999])
 
-train_set=train_set/255              # ormalizing（归一化加快收敛）
-test_set=test_set/255
-
+train_set=train_set/255.0              # ormalizing（归一化加快收敛）
+test_set=test_set/255.0                #model.fit() 必须是浮点数
+ 
 
 
 ```
@@ -33,7 +33,18 @@ model=tf.keras.models.Squential( [tf.keras.layers.Flatten(),                    
 ``` 设置训练数据时的梯度下降函数，损失函数，迭代次数```
 model.compile(optimizer=tf.train.AdaOptimizer(),
              loss='sparse_categorical_crossentropy'
+             metrics=['accuracy']              #[]一定要为list
+model.fit(train_set,train_label,epochs=5)
 
+model.evaluate(test_set,test_label)    #test_set 精度
+
+classifications = model.predict(test_images)  #所以testset的分类
+print(classifications[0])
+#第一个test集数据的分类结果，代表每个类别的概率 
+[1.5650018e-07 6.9283632e-09 7.0401005e-09 1.1662392e-09 2.3912292e-09
+ 2.3528349e-03 2.7860409e-07 1.9346710e-02 9.2136581e-08 9.7829986e-01]
+ ```
+ 
 
 
 
