@@ -47,4 +47,4 @@
 ***
 ## 实践
 * [fashion_mnist](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
-* [手写数字识别](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/mnist.py）
+* [手写数字识别](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/mnist.py)
