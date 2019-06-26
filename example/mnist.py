@@ -2,8 +2,8 @@
 import tensorflow as tf
 
 class myCallback(tf.keras.callbacks.Callback):
-  def on_epoch_end(self,epoch,log ={}):
-    if (log.get('acc')>0.99):
+  def on_epoch_end(self,epoch,log ={}):                        # on_epoch_end 
+    if (log.get('acc')>0.99):                                  #log.get('')  从log里提取
       print('Reached 99% accuracy so cancelling training!')
       self.model.stop_training = True
       
