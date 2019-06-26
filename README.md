@@ -46,4 +46,4 @@
 * [实例分割的进阶三级跳：从 Mask R-CNN 到 Hybrid Task Cascade](https://www.leiphone.com/news/201903/CctvkMTejB1Fvgxp.html)
 ***
 ## 实践
-* [A Computer Vision Example]()
+* [fashion_mnist](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
