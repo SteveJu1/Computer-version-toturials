@@ -22,8 +22,8 @@ tf.keras.layers.Dense(128,activation='relu')
 tf.keras.layers.Dense(10,activation='softmax')
 ])
 
-model.compile(optimizer='Adam',loss='sparse_categorical_crossentropy',metrics='accurary') # metrics衡量指标accurary（反映数据的拟合效果）
-model.summary()              # 统计模型的信息
+model.compile(optimizer='Adam',loss='sparse_categorical_crossentropy',metrics=['accuracy')]# metrics衡量指标 accuracy加[]
+model.summary()              # 统计模型的信息 input_shape=(28, 28, 1)必须要
 ```
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
