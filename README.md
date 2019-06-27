@@ -46,5 +46,6 @@
 * [实例分割的进阶三级跳：从 Mask R-CNN 到 Hybrid Task Cascade](https://www.leiphone.com/news/201903/CctvkMTejB1Fvgxp.html)
 ***
 ## 实践
-* [fashion_mnist](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
+* [fashion_mnist图像分类](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
 * [手写数字识别](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/mnist.py)
+* [CNN卷积神经网络]()
