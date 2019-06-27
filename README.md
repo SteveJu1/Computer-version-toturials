@@ -49,6 +49,7 @@
 * [fashion_mnist图像分类](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
 * [手写数字识别](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/mnist.py)
 * [CNN卷积神经网络](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/Convolution.py)
+* [真实场景下区分人和马](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/binary.py)
 * https://github.com/lmoroney/dlaicourse
 ### 其他
 [滤波器代码实现](https://lodev.org/cgtutor/filtering.html)
