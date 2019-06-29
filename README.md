@@ -52,6 +52,8 @@
 * [真实场景下区分人和马](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/binary.py)
 * https://github.com/lmoroney/dlaicourse
 
-* [kaggle/cats or dogs]()
+* [ImageDataGenerator](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/dogs_or_cats.py)
+* [Augmentation 数据增强](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/Augmentation.py)
+* [Transfer Learning]()
 ### 其他
 [滤波器代码实现](https://lodev.org/cgtutor/filtering.html)
