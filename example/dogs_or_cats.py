@@ -1,13 +1,15 @@
 ```
 Data from kaggle 
-
+dogs_or_cats classfication
+ImageDataGenerator
+flow_from_directory
 ```
 import tensorflow as tf
 import os
 import zipfile
 from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from shutil import copyfile         # shell utility 
+from shutil import copyfile          # shell utility 
 
 ```colab 获取网络数据的方式，如在本地可使用 urllib.request (Uniform Resource Identifier，统一资源标识符)或本地路径
 !wget --no-check-certificate \
@@ -19,7 +21,7 @@ zip_ref = zipfile.ZipFile(local_zip, 'r')
 zip_ref.extractall('/tmp')
 zip_ref.close()
 
-print(len(os.listdir('/tmp/PetImages/Cat/')))   # os.listdir('/tmp/PetImages/Cat/')是list
+print(len(os.listdir('/tmp/PetImages/Cat/')))   # os.listdir('/tmp/PetImages/Cat/')是list  len()获取list的长度
 # 建文件目录
 try:
     os.mkdir('/tmp/cats-v-dogs')
@@ -33,26 +35,26 @@ except OSError:
     pass   
 #  
 # os.listdir(DIRECTORY) gives you a listing of the contents of that directory
-# os.path.getsize(PATH) gives you the size of the file
+# os.path.getsize(PATH) gives you the size of the file               能判断文件是否为空
 # copyfile(source, destination) copies a file from source to destination
-# random.sample(list, len(list)) shuffles a list
+# random.sample(list, len(list)) shuffles a list                   random.sample(list,k) 随机返回K个list里的文件
 def split_data(SOURCE, TRAINING, TESTING, SPLIT_SIZE):
     files = []
-    for filename in os.listdir(SOURCE):
+    for filename in os.listdir(SOURCE):               
         file = SOURCE + filename
         if os.path.getsize(file) > 0:
-            files.append(filename)
+            files.append(filename)                               #若文件不为空，加载到files[]里
         else:
             print(filename + " is zero length, so ignoring.")
 
-    training_length = int(len(files) * SPLIT_SIZE)
+    training_length = int(len(files) * SPLIT_SIZE)              #traning_set的个数
     testing_length = int(len(files) - training_length)
     shuffled_set = random.sample(files, len(files))
     training_set = shuffled_set[0:training_length]
     testing_set = shuffled_set[-testing_length:]
 
     for filename in training_set:
-        this_file = SOURCE + filename
+        this_file = SOURCE + filename               #文件全路径
         destination = TRAINING + filename
         copyfile(this_file, destination)
 
@@ -86,24 +88,25 @@ model = tf.keras.models.Sequential([
 ])
 
 model.compile(optimizer=RMSprop(lr=0.001), loss='binary_crossentropy', metrics=['acc'])
-
+#####################重点是构造数据
 TRAINING_DIR = "/tmp/cats-v-dogs/training/"
-train_datagen = ImageDataGenerator(rescale=1.0/255.)
+train_datagen = ImageDataGenerator(rescale=1.0/255.)     #调用ImageDataGenerator.flow_from_directory 通过dir来给数据加标签
 train_generator = train_datagen.flow_from_directory(TRAINING_DIR,
                                                     batch_size=100,
-                                                    class_mode='binary',
-                                                    target_size=(150, 150))
-
+                                                    class_mode='binary',      #class_mode binary二分类   
+                                                    target_size=(150, 150))   #可以将大小不一样的图片弄成一样
 VALIDATION_DIR = "/tmp/cats-v-dogs/testing/"
 validation_datagen = ImageDataGenerator(rescale=1.0/255.)
 validation_generator = validation_datagen.flow_from_directory(VALIDATION_DIR,
                                                               batch_size=100,
                                                               class_mode='binary',
                                                               target_size=(150, 150))
-history = model.fit_generator(train_generator,
+######################
+history = model.fit_generator(train_generator,          #model.fit_generator 放入train数据，train_generator是object
                               epochs=50,
-                              verbose=1,
-                              validation_data=validation_generator)
+                              verbose=1,                #verbose 日志显示
+                              validation_data=validation_generator)  validation_data
+
 import matplotlib.image  as mpimg
 import matplotlib.pyplot as plt
 
