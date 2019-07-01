@@ -14,7 +14,8 @@
  这里同样再强调一下，在入门阶段一定，一定，要尽早写程序，敲代码！！（不要复制粘贴）
 ***
 ### 基础知识
-* [计算机视觉的应用场景](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.md)
+* [计算机视觉的应用场景](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.md)  
+unlock door/unlock phone,face re
 * [数字图像相关基础知识](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%9F%BA%E7%A1%80.md)
 * [图像处理相关工具和软件](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7.md)
 * [传统的图像处理的研究内容](https://github.com/lukkyy/Computer-version-toturials/blob/master/toturials/%E4%BC%A0%E7%BB%9F%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%86%85%E5%AE%B9.md)
@@ -41,10 +42,38 @@
 * 目标追踪 (Target Tracking):这个任务涉及的数据一般是时间序列，完成这个任务首先要目标定位。常见的情况是目标被定位以后，算法需要在后面的序列数据中，快速高效地对目标进行再定位。为了避免不必要的重复计算，可以充分利用时间序列的相关性，可能涉及到一些几何变换（旋转，缩放等），运动伪影处理等问题。
 [计算机视觉中，目前有哪些经典的目标跟踪算法？](https://www.zhihu.com/question/26493945)
 
+* neural style transfer
 ## 发展前沿
 * [三年来，CNN在图像分割领域经历了怎样的技术变革？](https://www.leiphone.com/news/201704/GEJU2kNeqGDpizN2.html)
 * [实例分割的进阶三级跳：从 Mask R-CNN 到 Hybrid Task Cascade](https://www.leiphone.com/news/201903/CctvkMTejB1Fvgxp.html)
 ***
+
+## Convolution Neural Network
+Convolution
+***
+```
+Edge Detection :use 3 by 3 filter/matrix 点乘 输入图像的大小为 n-f+1  n原始图像大小 f filter大小  
+
+若滤波器如下,会监测出图像的垂直的特征，different filters allow you to find vertical and horizontal edges  
+1 0 -1  
+1 0 -1  
+1 0 -1  
+Sobel filter(more robust) 中心区域值更大 
+1 0 -1  
+2 0 -2  
+1 0 -1 
+还可以将滤波器设置为参数，通过反向传播计算出来
+```
+padding  
+filter用的话会丢失边缘信息（没有被convolution），所以用padding（边缘加一圈0，若用5 * 5 filter 加二圈0）  
+padding后大小 n-f+1 +2P p:padding的大小  
+valid(没有padding) and same convolution（padding后和以前一样）
+stride步长 (n-f+2p)/s+1 若不是整数，向下取整，（超过的部分不计算）
+Tips：cross-correlations(交叉相关) convolution(其实要翻转90度，但约定俗成cross-correlation称convolution) 
+在高维空间卷积（convolution over volume）:RGB 6*6*3  * 3*3*3 = 4* 4 
+对应的位置相乘  
+如果想监测不同的特征，用不同的filter前后放在一起 组成channels/depth
+***  
 ## 实践
 * [fashion_mnist图像分类](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
 * [手写数字识别](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/mnist.py)
