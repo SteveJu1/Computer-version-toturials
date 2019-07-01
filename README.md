@@ -72,7 +72,9 @@ stride步长 (n-f+2p)/s+1 若不是整数，向下取整，（超过的部分不
 Tips：cross-correlations(交叉相关) convolution(其实要翻转90度，但约定俗成cross-correlation称convolution) 
 在高维空间卷积（convolution over volume）:RGB 6*6*3  * 3*3*3 = 4* 4 
 对应的位置相乘  
-如果想监测不同的特征，用不同的filter前后放在一起 组成channels/depth
+如果想监测不同的特征，用不同的filter前后放在一起 组成channels/depth  
+![](https://github.com/lukkyy/Computer-version-toturials/blob/master/img/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/convolution_layer.png)
+mini batch gradent decent
 ***  
 ## 实践
 * [fashion_mnist图像分类](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
