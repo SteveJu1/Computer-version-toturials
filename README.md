@@ -49,7 +49,7 @@ unlock door/unlock phone,face re
 ***
 
 ## Convolution Neural Network
-Convolution
+#### Convolution
 ***
 ```
 Edge Detection :use 3 by 3 filter/matrix 点乘 输入图像的大小为 n-f+1  n原始图像大小 f filter大小  
@@ -63,8 +63,9 @@ Sobel filter(more robust) 中心区域值更大
 2 0 -2  
 1 0 -1 
 还可以将滤波器设置为参数，通过反向传播计算出来
+[caffe卷积层反向传播实现原理](https://blog.csdn.net/lr87v5/article/details/80002374)
 ```
-padding  
+#### padding  
 filter用的话会丢失边缘信息（没有被convolution），所以用padding（边缘加一圈0，若用5 * 5 filter 加二圈0）  
 padding后大小 n-f+1 +2P p:padding的大小  
 valid(没有padding) and same convolution（padding后和以前一样）
@@ -73,8 +74,10 @@ Tips：cross-correlations(交叉相关) convolution(其实要翻转90度，但�
 在高维空间卷积（convolution over volume）:RGB 6*6*3  * 3*3*3 = 4* 4 
 对应的位置相乘  
 如果想监测不同的特征，用不同的filter前后放在一起 组成channels/depth  
-![](https://github.com/lukkyy/Computer-version-toturials/blob/master/img/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/convolution_layer.png)
-mini batch gradent decent
+![](https://github.com/lukkyy/Computer-version-toturials/blob/master/img/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/convolution_layer.png)  
+mini batch gradent decent  
+#### pooling layers  
+it has a set of hyperparameters but it has no parameters to learn
 ***  
 ## 实践
 * [fashion_mnist图像分类](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
