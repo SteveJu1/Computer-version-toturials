@@ -49,7 +49,11 @@ unlock door/unlock phone,face re
 ***
 
 ## Convolution Neural Network
-#### Convolution
+#### Convolution  
+parameter sharing(只有filters的参数), sparsity of connections（卷积后的一个像素只和之前的几个像素有关）
+
+
+[caffe卷积层反向传播实现原理](https://blog.csdn.net/lr87v5/article/details/80002374)
 ***
 ```
 Edge Detection :use 3 by 3 filter/matrix 点乘 输入图像的大小为 n-f+1  n原始图像大小 f filter大小  
@@ -63,7 +67,7 @@ Sobel filter(more robust) 中心区域值更大
 2 0 -2  
 1 0 -1 
 还可以将滤波器设置为参数，通过反向传播计算出来
-[caffe卷积层反向传播实现原理](https://blog.csdn.net/lr87v5/article/details/80002374)
+activation sizes= activation shape 总和
 ```
 #### padding  
 filter用的话会丢失边缘信息（没有被convolution），所以用padding（边缘加一圈0，若用5 * 5 filter 加二圈0）  
