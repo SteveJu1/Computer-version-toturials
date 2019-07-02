@@ -86,5 +86,6 @@ mini batch gradent decent
 * [ImageDataGenerator](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/dogs_or_cats.py)
 * [Augmentation 数据增强](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/Augmentation.py)
 * [Transfer Learning](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/Transfer_Learning.md)
+* [Sign Language MNIST(Multi-class)](https://github.com/lukkyy/TensorFlow_example/blob/master/kaggle/Multi-class_Classifier.py)
 ### 其他
 [滤波器代码实现](https://lodev.org/cgtutor/filtering.html)
