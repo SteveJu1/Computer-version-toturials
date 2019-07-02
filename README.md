@@ -84,6 +84,13 @@ mini batch gradent decent
 it has a set of hyperparameters but it has no parameters to learn
 ***  
 ## 实践
+***
+## Face Recognition
+two categories:  
+Face Verification - "is this the claimed person?".This is a 1:1 matching problem.
+Face Recognition - "who is this person?". This is a 1:K matching problem.
+***
+***
 * [fashion_mnist图像分类](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/fashion_mnist.py)
 * [手写数字识别](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/mnist.py)
 * [CNN卷积神经网络](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/Convolution.py)
@@ -94,5 +101,7 @@ it has a set of hyperparameters but it has no parameters to learn
 * [Augmentation 数据增强](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/Augmentation.py)
 * [Transfer Learning](https://github.com/lukkyy/Computer-version-toturials/blob/master/example/Transfer_Learning.md)
 * [Sign Language MNIST(Multi-class)](https://github.com/lukkyy/TensorFlow_example/blob/master/kaggle/Multi-class_Classifier.py)
+***
+
 ### 其他
 [滤波器代码实现](https://lodev.org/cgtutor/filtering.html)
